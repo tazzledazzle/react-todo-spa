@@ -68,3 +68,11 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+----
+## Further Enhancements
+* Filtering: add “All / Active / Completed” filters via extra context state.
+* Editing: inline-edit a to-do’s text.
+* Animations: use Framer Motion or CSSTransition.
+* Testing: write React Testing Library tests for your hooks and components.
+* Styling: swap plain CSS for styled-components or Tailwind.

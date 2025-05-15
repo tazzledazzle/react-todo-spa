@@ -19,13 +19,16 @@ const todoReducer = (state, action) => {
 };
 
 export const TodoProvider = ({ children }) => {
-  const [todos, dispatch] = useReducer(todoReducer, []);
+    // in TodoProvider before useReducer
+    const init = () => JSON.parse(localStorage.getItem('my-todos')) || [];
+    const [todos, dispatch] = useReducer(todoReducer, [], init);
+    //   const [todos, dispatch] = useReducer(todoReducer, []);
 
-  return (
-    <TodoContext.Provider value={{ todos, dispatch }}>
-      {children}
-    </TodoContext.Provider>
-  );
+    return (
+        <TodoContext.Provider value={{ todos, dispatch }}>
+        {children}
+        </TodoContext.Provider>
+    );
 };
 
 export default TodoContext;

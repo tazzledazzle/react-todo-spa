@@ -1,24 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+// src/App.jsx
+import React, { useEffect, useReducer } from 'react';
+import { TodoProvider } from './context/TodoContext';
+import TodoForm from './components/TodoForm';
+import TodoList from './components/TodoList';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <TodoProvider>
+      <div style={{ maxWidth: 400, margin: '2rem auto' }}>
+        <h1>My To-Do List</h1>
+        <TodoForm />
+        <TodoList />
+      </div>
+    </TodoProvider>
   );
 }
 
