@@ -3,7 +3,6 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import { TodoProvider } from '../context/TodoContext';
-import TodoItem from './TodoItem';
 import TodoList from './TodoList';
 import useTodos from '../hooks/useTodos';
 
